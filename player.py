@@ -20,6 +20,8 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.centerx = self.game.SCREEN_WIDTH // 2
         self.rect.bottom = self.game.SCREEN_HEIGHT
+        self.lives = 3
+        self.points = 0
 
     def load_animations(self):
         player_idle_sheet = pygame.image.load("sprites/characters/mask-dude/idle-32x32.png")
@@ -66,3 +68,12 @@ class Player(pygame.sprite.Sprite):
             self.index = 0
 
         self.image = self.images[self.status][int(self.index)]
+    
+    def take_damage(self, damage=1):
+        self.lives -= damage
+    
+    def is_alive(self):
+        return self.lives != 0
+
+    def add_points(self, points=1):
+        self.points += points
