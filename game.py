@@ -3,7 +3,7 @@ import random
 from player import Player
 from box import Box
 from fruit import Fruit
-
+from core.box import Box as BoxUI
 
 class FruitCollectionAnimation(pygame.sprite.Sprite):
     def __init__(self, game, x, y):
@@ -43,6 +43,7 @@ class Game:
         self.FPS = 60
         self.BLACK = (0, 0, 0)
         self.LIGHT_BLUE = (0, 150, 255)
+        self.WHITE = (255, 255, 255, 255)
         pygame.init()
         self.screen = pygame.display.set_mode((self.SCREEN_WIDTH, self.SCREEN_HEIGHT))
         pygame.display.set_caption("Falling Fruit")
@@ -103,12 +104,14 @@ class Game:
             self.screen.fill(self.LIGHT_BLUE)
             self.all_sprites.draw(self.screen)
 
-            font = pygame.font.SysFont(None, 30)
+            font = pygame.font.Font("font/pixelify-sans-variable-font.ttf", 30)
 
             points_text = font.render(f"Pontuação: {self.points}", True, self.BLACK)
             lives_text = font.render(f"Vidas: {self.lives}", True, self.BLACK)
 
+            BoxUI.draw(self.screen, self.BLACK, self.WHITE, 0, 0, points_text.get_width() + 25, points_text.get_height() + 25)
             self.screen.blit(points_text, (10, 10))
+            BoxUI.draw(self.screen, self.BLACK, self.WHITE, self.SCREEN_WIDTH - lives_text.get_width() - 20, 0, self.SCREEN_WIDTH, lives_text.get_height() + 25)
             self.screen.blit(lives_text, (self.SCREEN_WIDTH - lives_text.get_width() - 10, 10))
 
             pygame.display.flip()
