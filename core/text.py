@@ -2,10 +2,10 @@ import pygame
 
 
 class Text:
-    @staticmethod
-    def draw(surface, text, size, x, y, color):
-        font = pygame.font.Font(None, size)
-        text_surface = font.render(text, True, color)
-        text_rect = text_surface.get_rect()
-        text_rect.midtop = (x, y)
-        surface.blit(text_surface, text_rect)
+    def __init__(self, text: str, font: str, size: int, color: tuple[int, int, int] = (0, 0, 0), x: int = 0, y: int = 0) -> None:
+        self.font = pygame.font.Font(font, size)
+        self.text = self.font.render(text, True, color)
+        self.rect = self.text.get_rect(center=(x, y))
+
+    def draw(self, screen: pygame.Surface) -> None:
+        screen.blit(self.text, self.rect)

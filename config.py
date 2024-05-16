@@ -1,0 +1,6 @@
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+BLACK = (0, 0, 0)
+WINDOW_SIZE = (SCREEN_WIDTH, SCREEN_HEIGHT)
+FONT = "font/font.otf"
+NAME = "Falling Fruit"
