@@ -2,10 +2,6 @@
 
 A video-game made with [Python](https://www.python.org/) and [Pygame](https://www.pygame.org/news) that consists of avoiding boxes and collecting fruits.
 
-## Demo
-
-![Falling Fruit demo image](https://gitlab.com/olooeez/falling-fruit/-/raw/main/img/demo.png)
-
 ## Usage
 
 ### 1. Clone repository and enter in the directory
@@ -13,7 +9,7 @@ A video-game made with [Python](https://www.python.org/) and [Pygame](https://ww
 Use the command bellow to clone the repository: and enter in the directory:
 
 ```
-git clone https://gitlab.com/olooeez/falling-fruit.git
+git clone https://github.com/luizvilasboas/falling-fruit.git
 cd falling-fruit
 ```
 
@@ -41,4 +37,4 @@ If you're interested in contributing to this project, feel free to open a merge 
 
 ## License
 
-This project is available under the [MIT License](https://gitlab.com/olooeez/falling-fruit/-/blob/main/LICENSE). For more information, please see the LICENSE file.
+This project is available under the [MIT License](https://github.com/luizvilasboas/falling-fruit/blob/main/LICENSE). For more information, please see the LICENSE file.
