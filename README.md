@@ -2,6 +2,10 @@
 
 A video-game made with [Python](https://www.python.org/) and [Pygame](https://www.pygame.org/news) that consists of avoiding boxes and collecting fruits.
 
+## Demo
+
+![Falling Fruit demo image](https://media.githubusercontent.com/media/luizvilasboas/falling-fruit/refs/heads/main/img/demo.png)
+
 ## Usage
 
 ### 1. Clone repository and enter in the directory
